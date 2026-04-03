@@ -1,0 +1,124 @@
+/* Nexus Events Admin Styles */
+
+.nexus-event-meta {
+    background: #f9fafb;
+    padding: 1rem;
+    border-radius: 6px;
+    border: 1px solid #e5e7eb;
+}
+
+.nexus-event-meta label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #374151;
+}
+
+.nexus-event-meta input[type="text"],
+.nexus-event-meta input[type="date"],
+.nexus-event-meta input[type="time"],
+.nexus-event-meta input[type="number"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.2s ease;
+}
+
+.nexus-event-meta input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.nexus-event-meta p {
+    margin-bottom: 1rem;
+}
+
+/* Admin columns styling */
+.column-event_date,
+.column-event_time,
+.column-event_host,
+.column-game {
+    font-weight: 500;
+}
+
+/* Quick edit support */
+.inline-edit-col .nexus-event-quick-edit {
+    padding: 0.5rem 0;
+}
+
+.inline-edit-col .nexus-event-quick-edit label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: #374151;
+}
+
+.inline-edit-col .nexus-event-quick-edit input {
+    width: 100%;
+    font-size: 12px;
+}
+
+/* Taxonomy styling */
+.taxonomy-nexus_game .tagchecklist {
+    margin-top: 0.5rem;
+}
+
+.taxonomy-nexus_game .tagchecklist li {
+    margin: 0.25rem 0.5rem 0.25rem 0;
+}
+
+/* Featured image styling */
+.nexus-event-image-preview {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    border: 1px solid #e5e7eb;
+}
+
+/* Help text */
+.nexus-events-help {
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 4px;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.nexus-events-help h4 {
+    margin: 0 0 0.5rem 0;
+    color: #1e40af;
+}
+
+.nexus-events-help p {
+    margin: 0;
+    color: #1e40af;
+    font-size: 13px;
+}
+
+/* Validation styles */
+.nexus-event-meta input.error {
+    border-color: #ef4444;
+    background-color: #fef2f2;
+}
+
+.nexus-event-meta .error-message {
+    color: #ef4444;
+    font-size: 12px;
+    margin-top: 0.25rem;
+    display: block;
+}
+
+/* Responsive admin */
+@media (max-width: 768px) {
+    .nexus-event-meta {
+        padding: 0.75rem;
+    }
+    
+    .nexus-event-meta input {
+        font-size: 16px; /* Prevent zoom on iOS */
+    }
+}

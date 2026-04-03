@@ -1,0 +1,115 @@
+=== Nexus Gaming Events ===
+Contributors: nexusgaming
+Tags: events, gaming, community, wordpress, nexus
+Requires at least: 5.0
+Tested up to: 6.4
+Stable tag: 1.0.0
+License: GPL v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+
+Events plugin voor Nexus Gaming Community - Beheer en toon gaming events
+
+== Description ==
+
+Nexus Gaming Events is een krachtige WordPress plugin speciaal ontwikkeld voor gaming communities. Met deze plugin kunnen beheerders eenvoudig gaming events aanmaken, beheren en tonen aan de community.
+
+**Belangrijkste Functies:**
+
+* ✅ Events aanmaken via het WordPress dashboard
+* ✅ Eventinformatie tonen (datum, tijd, game, host, beschrijving)
+* ✅ Automatische Events overzichtspagina
+* ✅ Detailpagina per event
+* ✅ Mogelijkheid om events te delen via link
+* ✅ Overzicht van aankomende en afgelopen events
+* ✅ Custom Post Type voor Events
+* ✅ Game categorisering
+* ✅ Shortcode ondersteuning
+* ✅ Gutenberg block integratie
+* ✅ Responsive design
+* ✅ Dark mode ondersteuning
+
+**Gebruik:**
+
+1. Installeer en activeer de plugin
+2. Navigeer naar "Events" in het WordPress dashboard
+3. Maak je eerste event aan
+4. Gebruik de shortcode `[nexus_events]` om events te tonen
+5. Of gebruik het Nexus Events block in de Gutenberg editor
+
+**Shortcode Opties:**
+
+`[nexus_events limit="10" category="valorant" show_past="false" order="ASC"]`
+
+* `limit` - Aantal events om te tonen (standaard: 10)
+* `category` - Filter op game categorie (optioneel)
+* `show_past` - Toon verleden events (true/false, standaard: false)
+* `order` - Sorteervolgorde (ASC/DESC, standaard: ASC)
+
+**Template Customization:**
+
+Je kunt de template aanpassen door de volgende bestanden in je theme te plaatsen:
+
+* `single-nexus_event.php` - Voor single event pagina's
+* `archive-nexus_event.php` - Voor events archief pagina
+
+== Installation ==
+
+1. Upload de `nexus-events` map naar de `/wp-content/plugins/` directory
+2. Activeer de plugin via het 'Plugins' menu in WordPress
+3. Ga naar 'Events' in het WordPress dashboard om je eerste event aan te maken
+
+== Frequently Asked Questions ==
+
+= Hoe voeg ik een nieuw event toe? =
+
+Navigeer naar Events → Nieuw Event in het WordPress dashboard. Vul de titel, beschrijving en event details in zoals datum, tijd, game en host.
+
+= Kan ik events filteren op game? =
+
+Ja! Je kunt games toewijzen aan events via de 'Games' taxonomie. Gebruik de category parameter in de shortcode om te filteren.
+
+= Werkt deze plugin met page builders? =
+
+Ja, de plugin werkt met elke page builder die shortcodes ondersteunt. Daarnaast is er een speciaal Gutenberg block beschikbaar.
+
+= Hoe kan ik de styling aanpassen? =
+
+Je kunt de CSS overschrijven in je theme. De plugin gebruikt specifieke CSS classes die je kunt targeten.
+
+= Ondersteunt de plugin meertaligheid? =
+
+Ja, de plugin is voorbereid voor vertaling en gebruikt WordPress i18n functies.
+
+== Screenshots ==
+
+1. Events overzicht in het dashboard
+2. Event aanmaak formulier
+3. Frontend events weergave
+4. Single event pagina
+
+== Changelog ==
+
+= 1.0.0 =
+* Initiële release
+* Custom Post Type voor Events
+* Game taxonomie
+* Shortcode ondersteuning
+* Gutenberg block
+* Responsive design
+* Admin interface
+
+== Upgrade Notice ==
+
+= 1.0.0 =
+Eerste release van de Nexus Gaming Events plugin.
+
+== Additional Information ==
+
+**Plugin Development:**
+Deze plugin is specifiek ontwikkeld voor de Nexus Gaming Community en volgt WordPress coding standards.
+
+**Support:**
+Voor support en feature requests, neem contact op met de Nexus Gaming Community beheerders.
+
+**License:**
+Deze plugin is gelicenseerd onder GPL v2 of later.

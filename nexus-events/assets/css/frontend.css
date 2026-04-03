@@ -1,0 +1,480 @@
+/* Nexus Events Frontend Styles */
+
+.nexus-events-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+    padding: 0 1rem;
+}
+
+.nexus-event-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e5e7eb;
+}
+
+.nexus-event-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.nexus-event-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.nexus-event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.nexus-event-card:hover .nexus-event-image img {
+    transform: scale(1.05);
+}
+
+.nexus-event-content {
+    padding: 1.5rem;
+}
+
+.nexus-event-title {
+    margin: 0 0 1rem 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.nexus-event-title a {
+    color: #1f2937;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.nexus-event-title a:hover {
+    color: #3b82f6;
+}
+
+.nexus-event-date,
+.nexus-event-time,
+.nexus-event-host,
+.nexus-event-location,
+.nexus-event-games {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    color: #6b7280;
+    gap: 0.5rem;
+}
+
+.nexus-event-excerpt {
+    margin: 1rem 0;
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+.nexus-event-link {
+    display: inline-block;
+    background: #3b82f6;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.nexus-event-link:hover {
+    background: #2563eb;
+    color: white;
+}
+
+/* Single Event Styles */
+.nexus-single-event {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.nexus-event-meta-single {
+    background: #f9fafb;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    border: 1px solid #e5e7eb;
+}
+
+.nexus-event-details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.event-detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.event-detail-label {
+    font-weight: 600;
+    color: #374151;
+    font-size: 0.9rem;
+}
+
+.event-detail-value {
+    color: #6b7280;
+    font-size: 0.95rem;
+}
+
+.nexus-event-featured-image {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.nexus-event-featured-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nexus-event-actions {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.nexus-share-button,
+.nexus-comments-link {
+    background: #10b981;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.nexus-share-button:hover,
+.nexus-comments-link:hover {
+    background: #059669;
+    color: white;
+}
+
+.nexus-event-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0;
+    padding: 1rem 0;
+    border-top: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.nav-center {
+    text-align: center;
+}
+
+.nav-link {
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: #2563eb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nexus-events-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 0.5rem;
+    }
+    
+    .nexus-event-card {
+        margin: 0 0.5rem;
+    }
+    
+    .nexus-single-event {
+        padding: 1rem;
+    }
+    
+    .nexus-event-details-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .nexus-event-navigation {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .nav-prev,
+    .nav-next {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .nexus-event-content {
+        padding: 1rem;
+    }
+    
+    .nexus-event-title {
+        font-size: 1.25rem;
+    }
+    
+    .nexus-event-actions {
+        flex-direction: column;
+    }
+    
+    .nexus-share-button,
+    .nexus-comments-link {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .nexus-event-card {
+        background: #1f2937;
+        border-color: #374151;
+    }
+    
+    .nexus-event-title a {
+        color: #f9fafb;
+    }
+    
+    .nexus-event-title a:hover {
+        color: #60a5fa;
+    }
+    
+    .nexus-event-date,
+    .nexus-event-time,
+    .nexus-event-host,
+    .nexus-event-location,
+    .nexus-event-games {
+        color: #9ca3af;
+    }
+    
+    .nexus-event-excerpt {
+        color: #d1d5db;
+    }
+    
+    .nexus-event-meta-single {
+        background: #374151;
+        border-color: #4b5563;
+    }
+    
+    .event-detail-label {
+        color: #f3f4f6;
+    }
+    
+    .event-detail-value {
+        color: #9ca3af;
+    }
+}
+
+/* Games Display Styles */
+.nexus-games-container {
+    margin: 2rem 0;
+    padding: 0 1rem;
+}
+
+.nexus-games-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.nexus-games-header h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+}
+
+.nexus-games-count {
+    color: #6b7280;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.nexus-games-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.nexus-games-auto-columns {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+.nexus-games-columns-1 {
+    grid-template-columns: 1fr;
+}
+
+.nexus-games-columns-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.nexus-games-columns-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.nexus-games-columns-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.nexus-game-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e5e7eb;
+}
+
+.nexus-game-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.nexus-game-content {
+    padding: 1.5rem;
+}
+
+.nexus-game-title {
+    margin: 0 0 1rem 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.nexus-game-title a {
+    color: #1f2937;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.nexus-game-title a:hover {
+    color: #3b82f6;
+}
+
+.nexus-game-description {
+    margin: 1rem 0;
+    color: #4b5563;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.nexus-game-meta {
+    margin: 1rem 0;
+}
+
+.nexus-game-events-count {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #6b7280;
+    gap: 0.5rem;
+}
+
+.nexus-game-link {
+    display: inline-block;
+    background: #10b981;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+    margin-top: 1rem;
+}
+
+.nexus-game-link:hover {
+    background: #059669;
+    color: white;
+}
+
+/* Games Responsive Design */
+@media (max-width: 768px) {
+    .nexus-games-container {
+        padding: 0 0.5rem;
+    }
+    
+    .nexus-games-auto-columns,
+    .nexus-games-columns-2,
+    .nexus-games-columns-3,
+    .nexus-games-columns-4 {
+        grid-template-columns: 1fr;
+    }
+    
+    .nexus-games-header h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nexus-game-content {
+        padding: 1rem;
+    }
+    
+    .nexus-game-title {
+        font-size: 1.1rem;
+    }
+    
+    .nexus-game-description {
+        font-size: 0.9rem;
+    }
+    
+    .nexus-game-link {
+        width: 100%;
+        text-align: center;
+        display: block;
+    }
+}
+
+/* Games Dark Mode */
+@media (prefers-color-scheme: dark) {
+    .nexus-game-card {
+        background: #1f2937;
+        border-color: #374151;
+    }
+    
+    .nexus-game-title a {
+        color: #f9fafb;
+    }
+    
+    .nexus-game-title a:hover {
+        color: #60a5fa;
+    }
+    
+    .nexus-game-description {
+        color: #d1d5db;
+    }
+    
+    .nexus-game-events-count {
+        color: #9ca3af;
+    }
+    
+    .nexus-games-header h3 {
+        color: #f9fafb;
+    }
+    
+    .nexus-games-count {
+        color: #9ca3af;
+    }
+}
